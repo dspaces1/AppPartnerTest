@@ -25,9 +25,15 @@
 
     self.navController = [[UINavigationController alloc] initWithRootViewController:mainMenuViewController];
     [self.navController setNavigationBarHidden:YES];
+    
     self.window.rootViewController = self.navController;
+    
 
     return YES;
+}
+
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

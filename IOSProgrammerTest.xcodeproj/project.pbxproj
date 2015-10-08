@@ -25,6 +25,8 @@
 		DC932C201A40A50A000035B7 /* ChatSectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC932C161A40A50A000035B7 /* ChatSectionViewController.m */; };
 		DC932C211A40A50A000035B7 /* ChatSectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC932C171A40A50A000035B7 /* ChatSectionViewController.xib */; };
 		DC932C3C1A41FDC9000035B7 /* chatData.json in Resources */ = {isa = PBXBuildFile; fileRef = DC932C3B1A41FDC9000035B7 /* chatData.json */; };
+		F1461F5B1BC6C5AC009B7CC4 /* Jelloween - Machinato Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1461F591BC6C5AC009B7CC4 /* Jelloween - Machinato Light.ttf */; settings = {ASSET_TAGS = (); }; };
+		F1461F5C1BC6C5AC009B7CC4 /* Jelloween - Machinato.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1461F5A1BC6C5AC009B7CC4 /* Jelloween - Machinato.ttf */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		DC932C161A40A50A000035B7 /* ChatSectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatSectionViewController.m; sourceTree = "<group>"; };
 		DC932C171A40A50A000035B7 /* ChatSectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatSectionViewController.xib; sourceTree = "<group>"; };
 		DC932C3B1A41FDC9000035B7 /* chatData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chatData.json; sourceTree = "<group>"; };
+		F1461F591BC6C5AC009B7CC4 /* Jelloween - Machinato Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jelloween - Machinato Light.ttf"; sourceTree = "<group>"; };
+		F1461F5A1BC6C5AC009B7CC4 /* Jelloween - Machinato.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jelloween - Machinato.ttf"; sourceTree = "<group>"; };
 		FBB2E5A0D337EDBAC616FA00 /* Pods-IOSProgrammerTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSProgrammerTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-IOSProgrammerTest/Pods-IOSProgrammerTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +133,8 @@
 		4434B5B31A3FBB7100687081 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F1461F591BC6C5AC009B7CC4 /* Jelloween - Machinato Light.ttf */,
+				F1461F5A1BC6C5AC009B7CC4 /* Jelloween - Machinato.ttf */,
 				4434B5B41A3FBB7100687081 /* Info.plist */,
 				4434B5B51A3FBB7100687081 /* main.m */,
 			);
@@ -308,8 +314,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4434B5C41A3FBB7100687081 /* LaunchScreen.xib in Resources */,
+				F1461F5C1BC6C5AC009B7CC4 /* Jelloween - Machinato.ttf in Resources */,
 				DC932C211A40A50A000035B7 /* ChatSectionViewController.xib in Resources */,
 				DC932C191A40A50A000035B7 /* AnimationSectionViewController.xib in Resources */,
+				F1461F5B1BC6C5AC009B7CC4 /* Jelloween - Machinato Light.ttf in Resources */,
 				DC932C1F1A40A50A000035B7 /* ChatCell.xib in Resources */,
 				4434B5C11A3FBB7100687081 /* Images.xcassets in Resources */,
 				DC932C1D1A40A50A000035B7 /* MainMenuViewController.xib in Resources */,

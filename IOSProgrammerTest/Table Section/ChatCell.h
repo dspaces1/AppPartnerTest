@@ -10,4 +10,5 @@
 #import "ChatData.h"
 @interface ChatCell : UITableViewCell
 - (void)loadWithData:(ChatData *)chatData;
+
 @end

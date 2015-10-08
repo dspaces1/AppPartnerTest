@@ -25,6 +25,18 @@
     
     self.loadedChatData = [[NSMutableArray alloc] init];
     [self loadJSONData];
+    
+    [self setupTableViewCellHeights];
+}
+
+- (void)setupTableViewCellHeights
+{
+    self.tableView.estimatedRowHeight = 44;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+}
+
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)loadJSONData
@@ -56,16 +68,8 @@
 
     [self.tableView reloadData];
 }
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)backAction:(id)sender
-{
-    MainMenuViewController *mainMenuViewController = [[MainMenuViewController alloc] init];
-    [self.navigationController pushViewController:mainMenuViewController animated:YES];
+- (IBAction)backAction:(id)sender {
+   [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 #pragma mark - UITableViewDataSource
@@ -93,10 +97,4 @@
     return self.loadedChatData.count;
 }
 
-#pragma mark - UITableViewDelegate
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return TABLE_CELL_HEIGHT;
-}
 @end
