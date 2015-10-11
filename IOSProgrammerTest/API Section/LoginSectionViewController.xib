@@ -14,6 +14,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginSectionViewController">
             <connections>
+                <outlet property="password" destination="67N-lR-o3o" id="nRU-1b-DQd"/>
+                <outlet property="username" destination="Yzr-pt-2y2" id="ERc-1g-VGv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,7 +24,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LoginInScreen" translatesAutoresizingMaskIntoConstraints="NO" id="gor-tz-gfU">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginInScreen" translatesAutoresizingMaskIntoConstraints="NO" id="gor-tz-gfU">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <animations/>
                 </imageView>
@@ -138,15 +140,19 @@
             <constraints>
                 <constraint firstItem="sCU-RW-uMy" firstAttribute="top" secondItem="x2K-eO-uQX" secondAttribute="bottom" constant="24" id="2JK-Cc-ZsU"/>
                 <constraint firstItem="n7y-Aq-bd8" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ASc-oS-l45"/>
+                <constraint firstAttribute="bottom" secondItem="gor-tz-gfU" secondAttribute="bottom" id="Byw-i4-cEf"/>
                 <constraint firstAttribute="trailing" secondItem="x2K-eO-uQX" secondAttribute="trailing" id="Jit-k4-E3l"/>
                 <constraint firstItem="n7y-Aq-bd8" firstAttribute="top" secondItem="II2-xd-9Fx" secondAttribute="bottom" constant="18" id="Jni-jJ-93Y"/>
                 <constraint firstItem="x2K-eO-uQX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Jxx-KR-m69"/>
                 <constraint firstItem="x2K-eO-uQX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="PXR-gB-IpT"/>
                 <constraint firstAttribute="trailing" secondItem="II2-xd-9Fx" secondAttribute="trailing" id="VFi-89-v8A"/>
+                <constraint firstItem="gor-tz-gfU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Ygn-yV-s6L"/>
                 <constraint firstItem="II2-xd-9Fx" firstAttribute="top" secondItem="sCU-RW-uMy" secondAttribute="bottom" constant="10" id="fc2-fY-Rig"/>
+                <constraint firstItem="gor-tz-gfU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gjq-BP-M15"/>
                 <constraint firstItem="sCU-RW-uMy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="he4-Iv-Q28"/>
                 <constraint firstItem="II2-xd-9Fx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lnM-3x-sso"/>
                 <constraint firstAttribute="trailing" secondItem="sCU-RW-uMy" secondAttribute="trailing" id="mjc-hG-eTz"/>
+                <constraint firstAttribute="trailing" secondItem="gor-tz-gfU" secondAttribute="trailing" id="oqU-uQ-D5x"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
