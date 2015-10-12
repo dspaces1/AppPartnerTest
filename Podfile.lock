@@ -21,16 +21,16 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - IQKeyboardManager (3.3.2)
-  - MJExtension (2.5.12)
+  - UIView+draggable (1.0.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - IQKeyboardManager
-  - MJExtension
+  - UIView+draggable (~> 1.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
   IQKeyboardManager: d863eb0bca424d1f6dad6bdd1f856af52664add8
-  MJExtension: 5ab633484e431f777387c70b676c80f993361f1b
+  UIView+draggable: 57651151332c7b5a74b5de41c1e6333c14d66851
 
 COCOAPODS: 0.38.2

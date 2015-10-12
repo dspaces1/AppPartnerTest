@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "MainMenuViewController.h"
 
+
 @interface AppDelegate ()
 @property (nonatomic, strong) UINavigationController *navController;
 @end
@@ -28,7 +29,6 @@
     
     self.window.rootViewController = self.navController;
     
-
     return YES;
 }
 

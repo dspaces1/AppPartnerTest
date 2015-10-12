@@ -3,8 +3,8 @@
 
 target 'IOSProgrammerTest' do
 
+pod 'UIView+draggable', '~> 1.0'
 pod "AFNetworking", "~> 2.0"
-pod 'MJExtension'
 pod 'IQKeyboardManager'
 
 end

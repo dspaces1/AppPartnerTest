@@ -10,7 +10,6 @@
 #define RESTfulHelper_h
 
 @interface RESTfulHelper : NSObject
-+(void)doesSomething;
 +(void)postRequestWithDictionary:(NSDictionary*) jsonParameter url:(NSString*)url completionBlock: (void (^)(NSError *, NSDictionary *))blockName;
 @end
 

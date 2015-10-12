@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Jelloween - Machinato.ttf">
+            <string>Machinato</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnimationSectionViewController">
             <connections>
+                <outlet property="spinImage" destination="yyA-Tm-M7Y" id="Uj9-XQ-k4K"/>
+                <outlet property="spinView" destination="xbm-Qx-189" id="c7k-6H-ffn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,18 +22,113 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tbj-IL-RFt">
-                    <rect key="frame" x="23" y="16" width="58" height="30"/>
-                    <state key="normal" title="Back">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="smt-Qj-UGc"/>
-                    </connections>
-                </button>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mus-Ae-9Dr">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="Z90-AK-sJb"/>
+                    </constraints>
+                    <color key="barTintColor" red="0.1215686275" green="0.2274509804" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <textAttributes key="titleTextAttributes">
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </textAttributes>
+                    <items>
+                        <navigationItem title="Animation" id="mhk-ZT-lfB">
+                            <barButtonItem key="leftBarButtonItem" image="BackIcon" id="OQc-PB-RXI">
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="backAction:" destination="-1" id="g9p-x2-Mij"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AnimationScreen" translatesAutoresizingMaskIntoConstraints="NO" id="LQQ-96-jHf">
+                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                    <animations/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ozq-Xk-qRI" userLabel="Button">
+                    <rect key="frame" x="38" y="469" width="243" height="55"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpinImageButton" translatesAutoresizingMaskIntoConstraints="NO" id="lQV-zG-mDj">
+                            <rect key="frame" x="0.0" y="0.0" width="243" height="55"/>
+                            <animations/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRS-3v-Xrw">
+                            <rect key="frame" x="99" y="15" width="43.5" height="26"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" name="Machinato" family="Machinato" pointSize="22"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esb-OE-AcN">
+                            <rect key="frame" x="0.0" y="0.0" width="243" height="55"/>
+                            <animations/>
+                            <connections>
+                                <action selector="spinImage:" destination="-1" eventType="touchUpInside" id="6lZ-lk-kI6"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Esb-OE-AcN" secondAttribute="bottom" id="0ol-OZ-LZC"/>
+                        <constraint firstItem="Esb-OE-AcN" firstAttribute="leading" secondItem="Ozq-Xk-qRI" secondAttribute="leading" id="86p-LP-SrL"/>
+                        <constraint firstAttribute="height" constant="55" id="8jT-ex-AGl"/>
+                        <constraint firstAttribute="width" constant="243" id="C8O-YA-IAc"/>
+                        <constraint firstAttribute="bottom" secondItem="lQV-zG-mDj" secondAttribute="bottom" id="DmE-np-JLU"/>
+                        <constraint firstItem="Esb-OE-AcN" firstAttribute="top" secondItem="Ozq-Xk-qRI" secondAttribute="top" id="EpO-rs-t65"/>
+                        <constraint firstAttribute="trailing" secondItem="lQV-zG-mDj" secondAttribute="trailing" id="HJ0-2j-2vl"/>
+                        <constraint firstItem="lQV-zG-mDj" firstAttribute="leading" secondItem="Ozq-Xk-qRI" secondAttribute="leading" id="KKO-tW-5K1"/>
+                        <constraint firstAttribute="trailing" secondItem="Esb-OE-AcN" secondAttribute="trailing" id="f1N-QS-AeI"/>
+                        <constraint firstItem="GRS-3v-Xrw" firstAttribute="centerY" secondItem="Ozq-Xk-qRI" secondAttribute="centerY" id="ss4-lw-OoO"/>
+                        <constraint firstItem="GRS-3v-Xrw" firstAttribute="centerX" secondItem="Ozq-Xk-qRI" secondAttribute="centerX" id="vem-Av-Dq5"/>
+                        <constraint firstItem="lQV-zG-mDj" firstAttribute="top" secondItem="Ozq-Xk-qRI" secondAttribute="top" id="y7g-4u-1f7"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbm-Qx-189" userLabel="SpinView">
+                    <rect key="frame" x="90" y="234" width="140" height="132"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpinImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="yyA-Tm-M7Y">
+                            <rect key="frame" x="0.0" y="0.0" width="140" height="132"/>
+                            <animations/>
+                            <gestureRecognizers/>
+                        </imageView>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="yyA-Tm-M7Y" secondAttribute="trailing" id="LWo-2L-nIw"/>
+                        <constraint firstAttribute="bottom" secondItem="yyA-Tm-M7Y" secondAttribute="bottom" id="XlR-Lg-gDh"/>
+                        <constraint firstItem="yyA-Tm-M7Y" firstAttribute="top" secondItem="xbm-Qx-189" secondAttribute="top" id="dME-Rr-Lah"/>
+                        <constraint firstItem="yyA-Tm-M7Y" firstAttribute="leading" secondItem="xbm-Qx-189" secondAttribute="leading" id="edX-qS-sIN"/>
+                    </constraints>
+                </view>
             </subviews>
+            <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="LQQ-96-jHf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0Ua-Zg-bFy"/>
+                <constraint firstItem="Mus-Ae-9Dr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7iG-Mf-H3F"/>
+                <constraint firstItem="Ozq-Xk-qRI" firstAttribute="top" secondItem="xbm-Qx-189" secondAttribute="bottom" constant="103" id="GRL-Ab-nfO"/>
+                <constraint firstAttribute="trailing" secondItem="LQQ-96-jHf" secondAttribute="trailing" id="NHy-T4-W8g"/>
+                <constraint firstItem="Mus-Ae-9Dr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TaP-Ha-aDL"/>
+                <constraint firstAttribute="bottom" secondItem="LQQ-96-jHf" secondAttribute="bottom" id="VbB-1d-g8i"/>
+                <constraint firstAttribute="trailing" secondItem="Mus-Ae-9Dr" secondAttribute="trailing" id="VtG-GY-MVR"/>
+                <constraint firstItem="LQQ-96-jHf" firstAttribute="top" secondItem="Mus-Ae-9Dr" secondAttribute="bottom" id="gh1-op-uhm"/>
+                <constraint firstItem="xbm-Qx-189" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gye-F7-Bwt"/>
+                <constraint firstItem="xbm-Qx-189" firstAttribute="top" secondItem="Mus-Ae-9Dr" secondAttribute="bottom" constant="170" id="jIA-J0-QHm"/>
+                <constraint firstAttribute="bottom" secondItem="Ozq-Xk-qRI" secondAttribute="bottom" constant="44" id="ngl-BZ-FOS"/>
+                <constraint firstItem="Ozq-Xk-qRI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tvB-L1-TmM"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
+        <navigationItem title="Title" id="Jh8-tw-J1q"/>
     </objects>
+    <resources>
+        <image name="AnimationScreen" width="320" height="568"/>
+        <image name="BackIcon" width="20" height="20"/>
+        <image name="SpinImageButton" width="245" height="56"/>
+        <image name="SpinImageIcon" width="140" height="132"/>
+    </resources>
 </document>

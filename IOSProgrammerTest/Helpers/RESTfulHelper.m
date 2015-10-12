@@ -12,10 +12,6 @@
 
 @implementation RESTfulHelper
 
-+(void)doesSomething {
-    NSLog(@"Works");
-}
-
 +(void)postRequestWithDictionary:(NSDictionary*) jsonParameter url:(NSString*)url completionBlock: (void (^)(NSError *, NSDictionary *))blockName
 {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
